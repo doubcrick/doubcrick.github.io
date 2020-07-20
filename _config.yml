@@ -50,6 +50,7 @@ gems:
 
 #5、Gitment
 #gitment
+github_username: doubcrick
 comment_gitment_repo: doubcrick.github.io
 comment_gitment_clientId: 0025acd6f89ca5670055
 comment_gitment_clientSecret: dbd0bcf3dc6e761a1a25b6b63c282159e754c30b
