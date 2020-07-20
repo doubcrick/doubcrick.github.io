@@ -21,8 +21,8 @@ recent_num: 20
 #linkedin: suyan404
 
 # avatar and Favicon
-avatar: ../images/site-avatar.png
-favicon: ../images/site-avatar.ico
+avatar: ../../../images/site-avatar.png
+favicon: ../../../images/site-avatar.ico
 
 # disqus config
 # disqus:
