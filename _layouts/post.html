@@ -21,20 +21,21 @@ layout: default
   </div>
 </div>
 
-
-<div id="container"></div>
+{% if site.comment_gitment_repo %}
+<div id="gitmentContainer"></div>
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-        id: 'location.href',
-        owner: 'doubcrick',
-        repo: 'doubcrick',
+		id: '<%= page.date %>',
+        owner: '{{site.github_username}}',
+        repo: '{{site.comment_gitment_repo}}',
         oauth: {
-            client_id: '0025acd6f89ca5670055',
-            client_secret: 'dbd0bcf3dc6e761a1a25b6b63c282159e754c30b',
+            client_id: '{{site.comment_gitment_clientId}}',
+            client_secret: '{{site.comment_gitment_clientSecret}}',
         },
-    })
-    gitment.render('container')
+    });
+    gitment.render('gitmentContainer')
 </script>
+{% endif %}
 
