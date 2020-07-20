@@ -48,3 +48,9 @@ gems:
   - jekyll-seo-tag
   - jekyll-feed
 
+#5、Gitment
+gitment_owner: 'doubcrick'
+gitment_repo: 'doubcrick.github.io'       #例如：hopeshe.github.io
+gitment_oauth:
+    client_id: '0025acd6f89ca5670055'
+    client_secret: 'dbd0bcf3dc6e761a1a25b6b63c282159e754c30b'

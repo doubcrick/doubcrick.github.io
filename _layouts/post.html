@@ -26,4 +26,19 @@ layout: default
   <div id="disqus_thread">
   </div>
 </div>
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'location.href', // 可选。默认为 location.href
+        owner: 'doubcrick',
+        repo: 'doubcrick',
+        oauth: {
+            client_id: '0025acd6f89ca5670055',
+            client_secret: 'dbd0bcf3dc6e761a1a25b6b63c282159e754c30b',
+        },
+    })
+    gitment.render('container')
+</script>
 {% endif %}
