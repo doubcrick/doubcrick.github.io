@@ -300,23 +300,3 @@ mfence:在 mfence指令前的读写操作当必须在mfence指令后的读写操
 
 **补码：正数的补码与原码相同，负数的补码为对该数的原码除符号位外各位取反，然后在最后一位加 1**
 
-#### 17.面试题
-
-请描述synchronized和reentrantlock的底层实现及重入的底层原理-百度阿里
-请描述锁的四种状态和升级过程-百度阿里
-CAS的ABA问题如何解决-百度
-请谈一下AQS，为什么AQS的底层是CAS+volatile-百度
-请谈一下你对volatile的理解-美团阿里
-yolaltle的可见性和禁止指令重排序是如何实现的-美团aoa
-CAS是什么-美团
-请描述一下对象的创建过程一美团顺
-对象在内存中的内存布局-美团顺丰
-DCL单例为什么要加volatile-美团    
-解释一下锁的四种状态-顺丰
-Object o=new Object()在内存中占了多少字节-顺手
-请描述synchronized和ReentrantLock的异同一顺丰伞
-聊聊你对as-if-serial 和happens-before 语义的理解-京
-你了解ThreadLocal吗？你知道ThreadLocal中如何解决内存泄漏问题吗？-京东阿里
-请描述一下锁的分类以及JDK中的应用-阿里
-问：自旋锁一定比重量级锁效率高吗？-阿里
-打开偏问锁是否效影一定会提升？为什么？
