@@ -11,35 +11,27 @@ keywords: collection
 
 ### 2、java的集合有哪些？
 
-![](https://i.loli.net/2020/11/03/b3tCO6ihvjsKlga.png)
+![](https://i.loli.net/2020/11/04/Skv6jcEyhTWgdXt.png)
 
-### 2、java是如何执行的？
+queue：对象数组
 
-java文件->class文件->类加载器->字节码校验->执行入口->解释器/JIT->硬件
+SynchronousQueue：没有容量，放入一个必须等待去除后才能再次放入。
 
-![](https://i.loli.net/2020/11/02/cP4gBhlRAspj6X2.png)
+LinkedTransferQueue ：链表实现，阻塞机制类似同步队列，放入数据时检测到有等待的线程先唤醒线程。
 
-### 3、java提供的小工具
+### 3、其他
 
-jps：输出 JVM 中运行的进程状态信息，常用jps -l，类似于ps -ef|grep java
+1.hashmap
 
-jmap：查看堆内存使用状况,常用jmap -dump:live,format=b,file=ifix.hprof 22060，导出文件后使用MAT、VisualVM、jhat等工具分析内存泄露。dump操作为将整个heap写入文件，过程中将会暂停应用，对并发量较高的线上应用谨慎使用，推荐使用arthas。
+hashmap 底层扩容线程安全问题？哈希环
 
-jhat：jhat.exe -port 9999 ifix.hprof
+如果一个对象要作为 hashmap 的 key 需要做什么？实现hashcode和equals方法
 
-jstack：查看某个 Java 进程内的线程堆栈信息，常用jstack -l [pid]，通过该工具可以查看死锁、线程状态、找出该进程内最耗费 CPU 的线程等。
+hash 算法：为什么要⾼位和低位做异或运算？让⾼位也参与 hash 寻址运算，降低 hash 冲突
 
-jstat：JVM 统计监测工具，常用jstat -gc 22060 2s 4，查看gc情况。
+hash 寻址：为什么是 hash 值和数组.length - 1 进⾏与运算？因为取余算法效率很低，按位与运算效率⾼
 
-javap：将class文件进行指令级的反编译，常用 javap -c Test.class。
+扩容机制：数组 2 倍扩容，重新寻址（rehash），hash & n - 1，判断⼆进制结果中是否多出⼀个 bit 的 1，如果没多，那么就是原来的 index，如果多了出来，那么就是 index + oldCap，红⿊树，查找的性能， 是 O (logn)
 
-jinfo：查看运行的JVM参数信息，常用jinfo -flags 22060。
-
-### 4、其他
-
-hashmap 底层扩容线程安全问题
-
-如果一个对象 要作为 hashmap 的 key 需要做什么？
-
-线程同步方式，具体每一个怎么做的
+2.线程同步方式，具体每一个怎么做的
 
